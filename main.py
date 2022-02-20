@@ -41,7 +41,7 @@ class Parser():
         self.p = html_p.findAll('p')
         print(f'Абзацы p')
         for p in self.p:
-            print(p.text, sep='n/')
+            print(p.text)
 
 if __name__ == '__main__':
 
