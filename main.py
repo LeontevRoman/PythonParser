@@ -5,6 +5,7 @@ url = 'https://skillbox.ru/course/sql-analysis/'
 adress = r.get(url)
 html_soup = bs(adress.text, 'lxml')
 
+
 class Parser():
     default_p = ''
     default_h1 = ''
@@ -36,12 +37,12 @@ class Parser():
         for h3 in self.h3:
             print(h3.text)
 
-
     def find_p(self, html_p):
         self.p = html_p.findAll('p')
         print(f'Абзацы p')
         for p in self.p:
             print(p.text)
+
 
 if __name__ == '__main__':
 
@@ -54,5 +55,3 @@ if __name__ == '__main__':
     parser.find_h3(html_soup)
     print()
     parser.find_p(html_soup)
-
-
