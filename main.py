@@ -2,6 +2,7 @@ import requests as r
 from bs4 import BeautifulSoup as bs
 
 url = 'https://skillbox.ru/course/sql-analysis/'
+
 adress = r.get(url)
 html_soup = bs(adress.text, 'lxml')
 
